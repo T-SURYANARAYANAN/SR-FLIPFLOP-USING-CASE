@@ -1,6 +1,6 @@
 ### NAME : TSURYANARAYANAN
 ### REG NO : 24900450
-### EX-06 :  SR FLIPFLOP USING CASE
+### EX-06 :  SR FLIPFLOP 
 
 ### AIM:
 
@@ -45,26 +45,8 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 ### PROGRAM
 
-module SRFLIPFLOPUSINGCASE(q, q_bar, s,r, clk, reset);//SR Flip Flop Behavioral Level using ‘case’ 
-  input s,r,clk, reset;
-  output reg q;
-  output q_bar;
- 
-  always@(posedge clk) begin // for synchronous reset
-    if(!reset)
-		q <= 0;
-    else 
-  begin
-      case({s,r})       
-	     2'b00: q <= q;    // No change
-		  2'b01: q <= 1'b0; // Write logic for reset
-        2'b10: q <= 1'b1; // Write logic for set
-		  2'b11:	q <= 1'bx; // Write logic for Invalid state
-      endcase
-    end
-  end
-  assign q_bar = ~q;
-endmodule
+![image](https://github.com/user-attachments/assets/1cc34a17-1563-4121-8326-d95e2b823203)
+
 
 ### RTL LOGIC FOR FLIPFLOPS
 ![image](https://github.com/user-attachments/assets/3293af0a-7b10-4d39-9e49-7a2f13320379)
